@@ -1,18 +1,20 @@
 --[[
-Lua是动态类型语言，变量不要类型定义。
-Lua中有8个基本类型分别为：nil、boolean、number、string、userdata、function、thread和table。
-函数type可以测试给定变量或者值的类型。
+Lua 是动态类型语言，变量不要类型定义。
+Lua 中有 8 个基本类型分别为：nil、boolean、number、string、userdata、function、thread和table。
+函数 type 可以测试给定变量或者值的类型。
 --]]
+
 print(type("Hello world"))      --> string
 print(type(10.4*3))             --> number
 print(type(print))              --> function
 print(type(type))               --> function
-print(type(true))               --> boolean
+print(type(true))               --> boolen
 print(type(nil))                --> nil
 print(type(X))                  --> nil
 print(type(type(X)))            --> string
 
 --变量没有预定义的类型，每一个变量都可能包含任一种类型的值。
+
 print(type(a))    --> nil   ('a' is not initialized)
 a = 10
 print(type(a))    --> number
@@ -21,11 +23,15 @@ print(type(a))    --> string
 a = print         -- yes, this is valid!
 print(type(a))    --> function
 a(type(a))        --> function
+
 --注意上面最后两行，一般情况下同一变量代表不同类型的值会造成混乱，最好不要用，但是特殊情况下可以带来便利，比如nil。
 
 --Nil类型只有一个值nil，当一个全局变量没有被赋值以前默认值为nil；给全局变量赋值为nil可以删除该变量。
+
 --Boolean类型只有两个值true和false。但要注意Lua中所有的值都可以作为条件。在控制结构的条件中除了false和nil为假，其他值都为真。所以Lua认为0和空串都是真。
+
 --Number类型，表示实数，Lua里面没有整数。
+
 --String类型，指字符的序列。Lua中字符串是不可以修改的，你可以创建一个新的变量存放你要的字符串，如下：
 
 a = "one string"
@@ -57,28 +63,4 @@ end
 --反之,可以调用tostring()将数字转成字符串，这种转换一直有效：
 print(tostring(10) == "10")     --> true
 print(10 .. "" == "10")         --> true
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
