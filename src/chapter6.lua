@@ -7,4 +7,4 @@ function newCounter()
 end
 a = newCounter()
 print(a())
-print(a())
+print(a()

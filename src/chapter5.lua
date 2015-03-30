@@ -25,4 +25,4 @@ function plot (f)
     end
     io.read()  -- wait before spoiling the screen
 end
-plot(function (x) return math.sin(x*2*math.pi) end)
+plot(function (x) return math.sin(x*2*math.pi) end
